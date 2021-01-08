@@ -35,35 +35,13 @@
             color="cyan"
         ></v-text-field>
 
-        <!-------------------------  FORM ERRORS ------------------->
-        <!-- <div v-if="errors" class="subtitle1 text-center text-capitalize red--text">
-            <p v-for="(errorMessage, i) in errors" :key="i">{{errorMessage}}</p> -->
         <div>
             <span>Already have an account? <router-link class="cyan--text" to="/login">Sign In Here</router-link></span>
         </div>
-        <!-------------------------  END FORM ERRORS ------------------->
-
-        <!-- <div class="mt-5">
-            <v-btn type="submit" :loading="loadingForm" class="mr-4" color="#32BCC3" elevation="0" dark>
-                Sign Up
-            </v-btn>
-            <v-btn @click="reset" :disabled="loadingForm" color="#32BCC3" elevation="0" dark>
-                Clear
-            </v-btn>-->
     </form>
 </template>
 
 <script>
-// //ICONS
-// import { mdiEyeOutline } from '@mdi/js';
-// import { mdiEyeOffOutline } from '@mdi/js';
-
-// //MIXINS
-// import { reset } from '@/mixins/mixins';
-
-// //VUEX
-// import { mapGetters } from 'vuex';
-
 export default {
     // mixins: [reset],
     data: () => ({
@@ -81,10 +59,7 @@ export default {
         handleRules: [
             v => !!v || 'Name is required'
         ],
-        // svg: {
-        //     visibility: mdiEyeOutline,
-        //     visibilityOff: mdiEyeOffOutline,
-        // },
+
     }),
     methods: {
         loginHandlerSubmit() {
@@ -94,9 +69,7 @@ export default {
             })
         },
     },
-    // computed: {
-    //     ...mapGetters(['errors', 'loadingForm'])
-    // },
+
     beforeDestroy() {
         this.$store.dispatch('CLEAR_ERROR')
     }

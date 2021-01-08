@@ -18,11 +18,9 @@
             color="#32BCC3"
         ></v-text-field>
 
-        <!-------------------------  FORM ERRORS  ------------------->
         <div>
-            <span>Don't have an account? <router-link class="cyan--text" to="/signup" @click="signUp()">Sign Up Here</router-link></span>
+            <span>Don't have an account? <router-link class="cyan--text" to="/signup">Sign Up Here</router-link></span>
         </div>
-        <!-------------------------  END FORM ERRORS ------------------->
 
         <div class="mt-5">
             <v-btn type="submit" class="mr-4" color="#32BCC3" elevation="0" dark>
@@ -33,17 +31,7 @@
 </template>
 
 <script>
-// MIXINS
-// import { reset } from '@/mixins/mixins';
-
-// // SVG ICONS
-// import { mdiEyeOutline, mdiEyeOffOutline  } from '@mdi/js';
-
-// //VUEX
-// import { mapGetters } from 'vuex';
-
 export default {
-//     mixins: [reset],
     data: () => ({
         showPassword: false,
         loginUser: {
@@ -54,10 +42,7 @@ export default {
             v => !!v || 'E-mail is required',
             v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
         ],
-//         svg: {
-//             visibility: mdiEyeOutline,
-//             visibilityOff: mdiEyeOffOutline,
-      //},
+
     }),
     methods: {
         loginHandlerSubmit() {
@@ -74,9 +59,6 @@ export default {
             this.$router.push({name: 'SignUp'})
         }
     },
-//     computed: {
-//         ...mapGetters(['errors', 'loadingForm'])
-//     },
     beforeDestroy() {
         this.$store.dispatch('CLEAR_ERROR')
     }
