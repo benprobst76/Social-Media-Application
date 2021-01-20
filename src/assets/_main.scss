@@ -1,0 +1,50 @@
+//###################################################################
+//                             BASE
+//###################################################################
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+
+
+//###################################################################
+//                             CLASSES
+//###################################################################
+.relative {
+    position: relative
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hover {
+    cursor: pointer;
+}
+
+
+
+//###################################################################
+//                             COLORS
+//###################################################################
+.primario {
+    background:  #32BCC3 !important;
+}
+.secundario {
+    background: #723881 !important;
+}
+.background {
+    background: #d2fafb;
+}
+.gray {
+    background: #d6dfe2 !important;
+}
+.text-secundario {
+    color: #191C1E;
+}
+.background-secundario {
+    background: #191C1E;
+}
